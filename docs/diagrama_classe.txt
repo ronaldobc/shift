@@ -20,7 +20,7 @@ class Orcamento {
   valorTotal: Decimal
   valorDesconto: Decimal
   descricao: String
-  status: TipoStatus
+  status: StatusOrcamento
   finalizado: Boolean
 }
 
@@ -92,8 +92,13 @@ class ItemOrcamento {
   observacao: String
 }
 
-Item "*" *- "*" Orcamento
+Item "*" <- "*" Orcamento
 (Item, Orcamento) .. ItemOrcamento
-FontePagadora "0..*" *-u- Orcamento
+FontePagadora "1" *-u- "0..*" Orcamento
+
+Procedimento -d-> TipoProcedimento
+Adicional -d-> TipoAdicional
+Orcamento -> StatusOrcamento
+FontePagadora -d-> TipoFontePagadora
 
 @enduml
