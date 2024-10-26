@@ -1,0 +1,99 @@
+@startuml
+class PessoaFisica {
+  id: Integer
+  nome: String
+  cpf: String
+  dataNascimento: Date
+  sexo: String
+}
+
+class FontePagadora {
+  id : Integer
+  nome: String
+  tipo: TipoFontePagadora
+}
+
+class Orcamento {
+  id: Integer
+  dataValidade: Date
+  dataCadastro: Date
+  valorTotal: Decimal
+  valorDesconto: Decimal
+  descricao: String
+  status: TipoStatus
+  finalizado: Boolean
+}
+
+class Procedimento extends Item{
+  tipo: TipoProcedimento
+}
+
+class ItemTabela {
+  valor: Decimal
+  codigo: String
+}
+
+class TabelaPreco {
+  id : Integer
+  nome: String
+  inicioVigencia: Date
+  fimVigencia: Date
+}
+
+
+FontePagadora "1" *-d- "*" TabelaPreco
+
+abstract class Item {
+  id : Integer
+  nome: Strig
+  descricao : String
+}
+
+class Adicional extends Item {
+  tipo: TipoAdicional
+}
+
+enum TipoAdicional {
+  CustoMaterial
+  CustoMedicamento
+  Taxa
+  Anestesia
+}
+
+enum TipoFontePagadora {
+  Convenio
+  Particular
+  outros
+}
+
+enum TipoProcedimento {
+  Cirurgico
+  Consulta
+  Exame
+}
+
+enum StatusOrcamento {
+  EmAnalise
+  Aprovado
+  NaoAprovado
+}
+
+Item "*" - "*" TabelaPreco
+(Item, TabelaPreco) .. ItemTabela
+
+
+Orcamento "0..*" -u-* "1" PessoaFisica
+
+class ItemOrcamento {
+  id: Integer
+  valor: Decimal
+  qtde: Integer
+  valorDesconto: Decimal
+  observacao: String
+}
+
+Item "*" *- "*" Orcamento
+(Item, Orcamento) .. ItemOrcamento
+FontePagadora "0..*" *-u- Orcamento
+
+@enduml
