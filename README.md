@@ -12,7 +12,7 @@ Implementa uma API utilizando Quarkus no seguinte endpoint:
 
 Documento com sintaxe plantuml na pasta `./docs/diagrama_classe.txt`
 
-![Diagrama de Classe](https://www.plantuml.com/plantuml/png/ZLH1Znez3BtFhuWuVHyggBroMihkIdle5cdHtarYHfOoCKqSXBhgVs_2b4mYAjGBa1VRxptRuI48U8c3xRI54DGMGs1ufa0Qr4Ud59cLUd62FVfqSZpWIhs99zUdepuUgfC1WLS8cWPqmYlr28893dZc4lMh-qFqpAde5demxAzCwWwLq35LsQNF9dCg-Drhk13Vo1wLlOCb0mQBhWnkm40GFuazWMM_Om6R84nMm5xHHmmwKNDzOHBcIGDNIeE0n31gVRlyJk21NEB_2IP5VcMs26wIllMiqT2e7i-2pWJr8ZXyDCRhi2avn-rWZpPryIgrbgZPKF-N0OmvMu-Q_w7zv4WJlrEFJXEKTXreQB5SlsjdE_ioK_E5MQZPV5QpTXtiWtZGeYOdzwNqTSlLhQUroIeTsAQBgcrZ2SfvwEBGefVeJGp2tq3G4zXonXG3O_jLSdA6zBLs60G3GLFjThitx4xeA6TkmGlfQ26RuoYUGvNSpddC9HzzJvh7EY5QoTHFvoIcP8whrhw2fs6TrovW5dhqV0AJQxm2brDAppsw3ETsHF_bkqyrzBzQBgkTIzEUA6UVbyjS9YxcUUhDdqczhdUUwkt-_X239U3UM-HzG7-2-Z7MvkQZky9zzLQ0ugmWxI9VxSsJlwfCzu3EnC7-1W00)
+![Diagrama de Classe](https://raw.githubusercontent.com/ronaldobc/shift/refs/heads/master/docs/diagrama_classe.txt)
 
 ### 2. Listagem de possíveis Endpoints da API
 
@@ -67,7 +67,7 @@ Documento com sintaxe plantuml na pasta `./docs/diagrama_classe.txt`
 
 Documento em formato OpenAPI yaml na pasta `./docs/doc_api.yaml`
 
-[Swagger Editor](https://editor.swagger.io/?url=http://teste.com/arquivo.yaml)
+[Swagger Editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/ronaldobc/shift/refs/heads/master/docs/doc_api.yaml)
 
 ## Observações
 
