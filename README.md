@@ -12,7 +12,7 @@ Implementa uma API utilizando Quarkus no seguinte endpoint:
 
 Documento com sintaxe plantuml na pasta `./docs/diagrama_classe.txt`
 
-![Diagrama de Classe](https://raw.githubusercontent.com/ronaldobc/shift/refs/heads/master/docs/diagrama_classe.txt)
+![Diagrama de Classe](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/ronaldobc/shift/refs/heads/master/docs/diagrama_classe.txt)
 
 ### 2. Listagem de possíveis Endpoints da API
 
@@ -80,3 +80,4 @@ Documento em formato OpenAPI yaml na pasta `./docs/doc_api.yaml`
 - Adicionar o controle de segurança e permissão e classe para `Usuario`, representando quem fez os cadastros e alterações.
 - Foi utilizado campo Id como Integer, poderia ter sido implementado com UUID para facilitar a geração
 - Separar as classes de input request para não permitir passagem de valores desnecessários.
+- Ajustes na validação das regras de negócio em uma classe específica da camada de negócios.
