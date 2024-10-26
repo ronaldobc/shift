@@ -1,9 +1,9 @@
 # Desafio Técnico - Analista Desenvolvedor Web Shift
 
 Projeto para resolver o desafio técnico para vaga de Analista Desenvolvedor Web da Shift. 
-Implementa uma API utilizando Quarkus nos seguintes endpoints:
+Implementa uma API utilizando Quarkus no seguinte endpoint:
 - <b>/orcamento</b> - para gerenciar o cadastro de orçamentos
-- <b>/itemOrcamento</b> - para gerenciar os itens do orçamento
+
 
 
 ## Entregáveis do Desafio
@@ -71,10 +71,10 @@ Documento em formato OpenAPI yaml na pasta `./docs/doc_api.yaml`
 
 ## Observações
 
-### Decisões da modelagem de classe e Implementação
+### Decisões na modelagem  do Diagrama de Classe e Implementação
 - Utilizei uma classe pai chamada `Item` para representar os procedimentos e adicionais, para facilitar o relacionamento com a classe `Orcamento` e `TabelaPreço`.<br>Esta decisão provavelmente complicaria o mapeamento para o banco de dados relacional ao utilizar o ORM, contudo poderia facilmente ser revertida criando os relacionamentos direto com as classes `Procedimento` e `Adicional` com duas propriedades de lista ao invés de apenas uma na classe `Orcamento`.   
 - Adicionei na modelagem o controle de `TabelaPreco` para deixar mais próximo da realidade, ao invés de colocar um campo de valor direto no `Item`. Desta forma o `Procedimento` e `Adicional` poderiam estar relacionados a mais de uma `FontePagadora` através da `TabelaPreco`.
-- Não utilizei banco de dados apenas uma classe `Dados` com listas para fazer a simulação de tabelas para testar os endpoints. 
+- Não utilizei banco de dados, pois não tinha nada especificado na descrição do desafio. Criei apenas uma classe `Dados` com listas para fazer a simulação de tabelas para testar os endpoints. 
 
 ### Pontos de Melhoria
 - Adicionar o controle de segurança e permissão e classe para `Usuario`, representando quem fez os cadastros e alterações.
